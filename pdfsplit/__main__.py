@@ -1,15 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-Cut out range of pages from pdf.
-"""
-
-__author__ = "Ondřej Profant"
-__email__ = "ondrej.profant@gmail.com"
-__license__ = "GPLv3"
-__version__ = "v0.1"
-
 import os
 from tkinter import *
 from tkinter import filedialog, messagebox
@@ -80,7 +71,7 @@ class Gui(Frame):
 
     def cut(self):
         try:
-            f = int(self.from_page.get()-1)
+            f = int(self.from_page.get())-1
             t = int(self.last_page.get())
             if f >= t:
                 raise IndexError()
